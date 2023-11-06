@@ -81,7 +81,7 @@ export default function Books() {
     }
   }
   useEffect(() => {
-    if (!user) {
+    if (!user?.login) {
       navigate("/")
     }
 

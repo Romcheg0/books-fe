@@ -68,7 +68,7 @@ export default function Authors() {
     }
   }
   useEffect(() => {
-    if (!user) {
+    if (!user?.login) {
       navigate("/")
     }
 

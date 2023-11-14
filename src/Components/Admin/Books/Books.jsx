@@ -36,6 +36,10 @@ export default function Books() {
       .get(`${env.apiUrl}/users`)
       .then((res) => {
         setUsers(res.data)
+        setEditable({
+          ...editable,
+          author_id: res.data[0].id,
+        })
       })
       .catch((e) => {
         console.error(e)
